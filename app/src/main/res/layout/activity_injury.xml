@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InjuryActivity"
+    android:weightSum="10">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/injuryRecycleV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        tools:listitem="@layout/item_message_send"
+        tools:itemCount="5"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/editTextInj"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="match_parent"
+            android:hint="@string/hint"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_input"
+            android:textAlignment="center"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/sendButtonInj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:textColor="@color/White"
+            android:background="@drawable/button_background"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

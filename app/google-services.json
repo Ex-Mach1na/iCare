@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "733745934809",
+    "firebase_url": "https://icare-aa11c.firebaseio.com",
+    "project_id": "icare-aa11c",
+    "storage_bucket": "icare-aa11c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733745934809:android:5a32967d30d9cbef5de9c8",
+        "android_client_info": {
+          "package_name": "com.example.icare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733745934809-gupirgcv9vtg851s9f8s7ok4cf4361i5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsBWUJRDmuvf1UTJduLsuJc8N6AGepqtM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733745934809-gupirgcv9vtg851s9f8s7ok4cf4361i5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

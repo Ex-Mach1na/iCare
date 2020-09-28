@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">iCare</string>
+    <string name="slogan">Your Doorstep Medical Solution</string>
+    <string name="app_icon">AppIcon</string>
+    <string name="InjurySupport">Injury Support</string>
+    <string name="IllnessSupport">Illness Support</string>
+    <string name="about" translatable="false">About</string>
+    <string name="Exit">Exit</string>
+    <string name="welcomeMsgText">Welcome to iCare. How can I help You?</string>
+    <string name="time1">Good Morning!!</string>
+    <string name="time2">Good Afternoon!!</string>
+    <string name="time3">Good Evening!!</string>
+    <string name="time4">Good Night!!</string>
+    <string name="hint">write you message</string>
+    <string name="send">Send</string>
+</resources>

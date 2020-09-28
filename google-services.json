@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "669074616335",
+    "firebase_url": "https://cureit-9c6c3.firebaseio.com",
+    "project_id": "cureit-9c6c3",
+    "storage_bucket": "cureit-9c6c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669074616335:android:23d69caa1bc4588168f37a",
+        "android_client_info": {
+          "package_name": "com.example.cureit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAw5GvKsxXbhQYqRGj45b-kEuboXE8J24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669074616335:android:42153e33a09b235f68f37a",
+        "android_client_info": {
+          "package_name": "com.example.icare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAw5GvKsxXbhQYqRGj45b-kEuboXE8J24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
