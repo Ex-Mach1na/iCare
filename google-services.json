@@ -1,63 +1,34 @@
 {
   "project_info": {
-    "project_number": "669074616335",
-    "firebase_url": "https://cureit-9c6c3.firebaseio.com",
-    "project_id": "cureit-9c6c3",
-    "storage_bucket": "cureit-9c6c3.appspot.com"
+    "project_number": "570238572272",
+    "firebase_url": "https://icare-50e1d.firebaseio.com",
+    "project_id": "icare-50e1d",
+    "storage_bucket": "icare-50e1d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:669074616335:android:23d69caa1bc4588168f37a",
-        "android_client_info": {
-          "package_name": "com.example.cureit"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCAw5GvKsxXbhQYqRGj45b-kEuboXE8J24"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:669074616335:android:42153e33a09b235f68f37a",
+        "mobilesdk_app_id": "1:570238572272:android:9a9910e6da27e642c65435",
         "android_client_info": {
           "package_name": "com.example.icare"
         }
       },
       "oauth_client": [
         {
-          "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
+          "client_id": "570238572272-nm4vpgvmt5aqvgsdsvpis7rs85dil2so.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCAw5GvKsxXbhQYqRGj45b-kEuboXE8J24"
+          "current_key": "AIzaSyAv6jx-4ZFbrLGxEYGAUoce7iqV0CU4pU0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "669074616335-d8vh0vu3b7e2eh7mpr22td7ppub26dbh.apps.googleusercontent.com",
+              "client_id": "570238572272-nm4vpgvmt5aqvgsdsvpis7rs85dil2so.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

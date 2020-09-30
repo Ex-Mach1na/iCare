@@ -39,7 +39,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         aboutButton.setOnClickListener {
-            Toast.makeText(applicationContext, "Stay tuned", LENGTH_SHORT).show()
+            //Toast.makeText(applicationContext, "Stay tuned", LENGTH_SHORT).show()
+            val intent3 = Intent(this, Database::class.java)
+            startActivity(intent3)
         }
 
         exitButton.setOnClickListener {

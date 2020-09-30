@@ -3,13 +3,11 @@ package com.example.icare
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView
 import com.example.icare.databinding.ItemMessageReceiveBinding
 import com.example.icare.databinding.ItemMessageSendBinding
 import com.example.icare.model.Message
-import com.google.firebase.database.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.databinding.BindableItem
@@ -29,7 +27,7 @@ class InjuryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_injury)
 
         //Database
-        val ref:DatabaseReference = FirebaseDatabase.getInstance().getReference("Injuries/temp")
+        /**val ref:DatabaseReference = FirebaseDatabase.getInstance().getReference("Injuries/temp")
 
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -50,9 +48,7 @@ class InjuryActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
 
-        })
-
-
+        })**/
 
 
 
@@ -60,47 +56,72 @@ class InjuryActivity : AppCompatActivity() {
         val editTextInj : AppCompatAutoCompleteTextView = findViewById(R.id.editTextInj)
 
         val values = arrayOf("ABC","Nothing","Anything","Banana","Book","Heart","Help","Happy","Live","Forever")
+
         val newAdapter = ArrayAdapter<String>(this, android.R.layout.select_dialog_item, values)
-        editTextInj.threshold = 0
+        editTextInj.threshold = 1
         editTextInj.setAdapter(newAdapter)
 
         injuryRecycleV.adapter = messageAdapter
-        populateData()
 
-        recieveAutoResponse("How are you feeling today?")
+        receiveAutoResponse( getString(R.string.start_msg_injury) )
         sendButtonInj.setOnClickListener {
-            val message = Message(editTextInj.text.toString(), "me"
-            )
+            val message = Message(editTextInj.text.toString(), "me")
+
             val sendMessageItem = SendMessageItem(message)
             messageAdapter.add(sendMessageItem)
             editTextInj.text.clear()
 
-            recieveAutoResponse(message.msg)
+            receiveAutoResponse(message.msg)
         }
     }
 
-    fun populateData(){
-        val data = listOf<Message>()
-        data.forEach{
-            if(it.sendby == "me")
-            {
-                messageAdapter.add(SendMessageItem(it))
-            }
-            else
-                messageAdapter.add(ReceiveMessageItem(it))
-        }
-    }
 
-    private fun recieveAutoResponse(temp: String){
+    private fun receiveAutoResponse(temp: String){
+
+        var finalString:String = "Sorry. I didn't understand. Can you repeat?"
+
+        if(temp.equals(getString(R.string.start_msg_injury)))
+            finalString = temp
+        if(startOfChat(temp))
+            finalString = getString(R.string.start_msg_injury)
+        if(endOfChat(temp))
+            finalString = getString(R.string.end_of_conversation)
+
         GlobalScope.launch(Dispatchers.Main) {
             delay(500)
             val receive = Message(
-                msg = temp, sendby = "me"
+                msg = finalString, sendby = "me"
             )
             val receiveItem = ReceiveMessageItem(receive)
 
             messageAdapter.add(receiveItem)
         }
+    }
+
+    private fun endOfChat (msg: String) : Boolean
+    {
+        val terminateCommands:Array<String> = arrayOf("ok", "thanks", "thank you", "bye")
+
+        for(i in terminateCommands)
+        {
+            if(msg.equals(i, true))
+            {
+                return true
+            }
+        }
+        return false
+    }
+
+    private fun startOfChat (msg: String) : Boolean
+    {
+        val startCommands:Array<String> = arrayOf("Hello", "Hi", "Oi", "Can you help?", "can you help")
+
+        for(i in startCommands)
+        {
+            if(msg.equals(i, true))
+                return true
+        }
+        return false
     }
 }
 

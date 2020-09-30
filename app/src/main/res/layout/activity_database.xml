@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Database"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textSize="26dp"
+        android:textAlignment="center"
+        android:text="Injuries Database"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/injury_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Injury Name" />
+
+    <EditText
+        android:id="@+id/solution"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="Solution to injury" />
+    <Button
+        android:id="@+id/savedata"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Upload" />
+
+
+
+</LinearLayout>
