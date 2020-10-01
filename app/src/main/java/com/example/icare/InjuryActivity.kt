@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView
 import com.example.icare.databinding.ItemMessageReceiveBinding
@@ -30,6 +29,7 @@ class InjuryActivity : AppCompatActivity() {
     lateinit var editTextInj : AppCompatAutoCompleteTextView
     lateinit var injuryInfo: InjuryInfo
     lateinit var allInjuryInfo: MutableList<InjuryInfo>
+    lateinit var tempArray:Array<String>
     var flag:Int = 0
 
 
@@ -37,11 +37,29 @@ class InjuryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_injury)
 
-        getValueFromDatabase()
+        //getValueFromDatabase()
+        val ref = FirebaseDatabase.getInstance().getReference("Injury")
+        allInjuryInfo = mutableListOf()
+        tempArray = resources.getStringArray(R.array.injury_name)
 
-        val values = arrayOf("ABC","Nothing","Anything","Banana","Book","Heart","Help","Happy","Live","Forever")
+        ref.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.exists())
+                {
+                    Log.d("Database", "Found")
+                    for(data in snapshot.children)
+                    {
+                        val temp : InjuryInfo? = data.getValue(InjuryInfo::class.java)
+                        Log.d("ValuesOfDatabase","Data = ${temp!!.id}  ${temp.Name} ")
+                    }
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
 
-        val newAdapter = ArrayAdapter<String>(this, android.R.layout.select_dialog_item, values)
+        })
+
 
         injuryRecycleV.adapter = messageAdapter
 
@@ -66,12 +84,18 @@ class InjuryActivity : AppCompatActivity() {
             val sendMessageItem = SendMessageItem(message)
             messageAdapter.add(sendMessageItem)
             editTextInj.text.clear()
+            if(message.msg in tempArray)
+            {
+                receiveAutoResponse(message.msg, 2)
+            }
+            else
+                receiveAutoResponse(message.msg,0)
 
             //receiveAutoResponse(message.msg)
         }
     }
 
-    private fun getValueFromDatabase()
+    /**private fun getValueFromDatabase()
     {
 
         //FirebaseDatabase.getInstance().setPersistenceEnabled(true)
@@ -84,10 +108,17 @@ class InjuryActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists())
                 {
-                    for(i in snapshot.children)
+                    //for(i in snapshot.children)
+                    //{
+                    //    val temp = i.getValue(InjuryInfo::class.java)
+                    //    allInjuryInfo.add(temp!!)
+                    //}
+
+                    var i:Int = 0
+                    for(i in 1..6)
                     {
-                        val temp = i.getValue(InjuryInfo::class.java)
-                        allInjuryInfo.add(temp!!)
+                        val info:InjuryInfo = snapshot.child(i.toString()).getValue(InjuryInfo::class.java)!!
+                        Log.d("Tag","Bla bla bla ${info.Name}")
                     }
                 }
                 else
@@ -99,7 +130,7 @@ class InjuryActivity : AppCompatActivity() {
             }
 
         })
-    }
+    }*/
 
 
     private fun receiveAutoResponse(temp: String, flag :Int){
@@ -109,13 +140,36 @@ class InjuryActivity : AppCompatActivity() {
         if(flag == 1 || startOfChat(temp))
         {
             finalString = getString(R.string.start_msg_injury)
-            /*finalString += "\n"
-            for(i in allInjuryInfo)
+            finalString += "\n"
+            val newAdapter = ArrayAdapter<String>(this, android.R.layout.select_dialog_item, tempArray)
+            editTextInj.setAdapter(newAdapter)
+            editTextInj.threshold = 1
+            editTextInj.text.clear()
+
+            for(i in tempArray)
             {
-                finalString += i.Name
+                finalString += i
                 finalString += '\n'
-            }*/
+            }
+            finalString += "\nPlease tell me which one do you have."
+            //Log.d("Tag","${finalString}")
         }
+
+        if(flag == 2)
+        {
+            finalString = "I have a solution for you\n\n"
+            if(temp.equals(getString(R.string.injury_name1),true))
+                finalString += getString(R.string.injury1)
+            else if(temp.equals(getString(R.string.injury_name2),true))
+                finalString += getString(R.string.injury2)
+            else if(temp.equals(getString(R.string.injury_name3),true))
+                finalString += getString(R.string.injury3)
+            else if(temp.equals(getString(R.string.injury_name4),true))
+                finalString += getString(R.string.injury4)
+            else if(temp.equals(getString(R.string.injury_name5),true))
+                finalString += getString(R.string.injury5)
+        }
+
         if(endOfChat(temp))
             finalString = getString(R.string.end_of_conversation)
 

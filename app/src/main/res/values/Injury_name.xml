@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="injury_name">
+        <item>Animal Bites</item>
+        <item>Blisters</item>
+        <item>Burns</item>
+        <item>Cuts and Graze</item>
+        <item>Acid and Chemical Burns</item>
+    </string-array>
+</resources>

@@ -1,10 +1,10 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">iCare</string>
     <string name="slogan">Your Doorstep Medical Solution</string>
     <string name="app_icon">AppIcon</string>
     <string name="InjurySupport">Injury Support</string>
     <string name="IllnessSupport">Illness Support</string>
-    <string name="about" translatable="false">About</string>
+    <string name="about">About</string>
     <string name="Exit">Exit</string>
     <string name="welcomeMsgText">Welcome to iCare. How can I help You?</string>
     <string name="time1">Good Morning!!</string>
@@ -15,4 +15,17 @@
     <string name="send">Send</string>
     <string name="start_msg_injury">Hey!! What is your injury? Can you please tell me?</string>
     <string name="end_of_conversation">Take care of yourself. Bye.</string>
+
+    <!-- Temporarily declared here -->
+    <string name="injury_name1">Animal Bites</string>
+    <string name="injury_name2">Blisters</string>
+    <string name="injury_name3">Burns</string>
+    <string name="injury_name4">Cuts and Grazes</string>
+    <string name="injury_name5">Acid and Chemical Burns</string>
+
+    <string name="injury1"> "1. Clean the wound immediately by running warm tap water over it for a couple of minutes – it\'s a good idea to do this even if the skin doesn\'t appear to be broken.\n 2. remove any objects from the bite, such as teeth, hair or dirt.\n 3. encourage the wound to bleed slightly by gently squeezing it, unless it\'s already bleeding freely.\n 4. if the wound is bleeding heavily, put a clean pad or sterile dressing over it and apply pressure.\n 5. dry the wound and cover it with a clean dressing or plaster.\n 6. take painkillers if you're in pain, such as paracetamol or ibuprofen – children under 16 years old shouldn't take aspirin.\n 7. seek medical advice to avoid infections.\n" </string>
+    <string name="injury2"> "Most blisters heal naturally after three to seven days and don\'t require medical attention.\nIt\'s important to avoid bursting the blister, because this could lead to an infection or slow down the healing process. \nIf the blister does burst, don't peel off the dead skin. Instead, allow the fluid inside the blister to drain and cover the area with a dry, sterile dressing to protect it from infection until it heals."</string>
+    <string name="injury3"> 1. Cool the burn with cool or lukewarm running water for 20 minutes – don\'t use ice, iced water, or any creams or greasy substances such as butter.\n2. Remove any clothing or jewellery that\'s near the burnt area of skin, including babies nappies - but don\'t move anything that\'s stuck to the skin.\n3. Make sure the person keeps warm – by using a blanket, for example, but take care not to rub it against the burnt area.\n4. Cover the burn by placing a layer of cling film over it – a clean plastic bag could also be used for burns on your hand.\n5. Use painkillers such as paracetamol or ibuprofen to treat any pain\n6. If the face or eyes are burnt, sit up as much as possible, rather than lying down - this helps to reduce swelling.\n7. Seek medical assistance if you are having a sore throat, difficulties in breathing, a sore throat.\n</string>
+    <string name="injury4"> 1. Stop any bleeding before applying a dressing to the wound. Apply pressure to the area using a clean and dry absorbent material – such as a bandage, towel or handkerchief – for several minutes. \n2. Wash and dry your hands thoroughly.\n3. Clean the wound under drinking-quality running tap water – avoid using antiseptic as it may damage the skin and slow healing.\n4. Pat the area with a clean towel.\n5. Apply a sterile adhesive dressing, such as a plaster.\n6. If the wound is painful for the first few days, you can take over-the-counter painkillers such as paracetamol or ibuprofen. \n"</string>
+    <string name="injury5"> 1. Call emergency service and get medical help.\n2. Try to carefully remove the chemical and any contaminated clothing.\n3. Rinse the affected area using as much clean water as possible.\n"</string>
 </resources>
