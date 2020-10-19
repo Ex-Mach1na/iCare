@@ -15,6 +15,7 @@
     <string name="send">Send</string>
     <string name="start_msg_injury">Hey!! What is your injury? Can you please tell me?</string>
     <string name="end_of_conversation">Take care of yourself. Bye.</string>
+    <string name="start_msg_illness">Hey!! Are you alright? Please talk with me so that I can help you.</string>
 
     <!-- Temporarily declared here -->
     <string name="injury_name1">Animal Bites</string>
@@ -28,4 +29,45 @@
     <string name="injury3"> 1. Cool the burn with cool or lukewarm running water for 20 minutes – don\'t use ice, iced water, or any creams or greasy substances such as butter.\n2. Remove any clothing or jewellery that\'s near the burnt area of skin, including babies nappies - but don\'t move anything that\'s stuck to the skin.\n3. Make sure the person keeps warm – by using a blanket, for example, but take care not to rub it against the burnt area.\n4. Cover the burn by placing a layer of cling film over it – a clean plastic bag could also be used for burns on your hand.\n5. Use painkillers such as paracetamol or ibuprofen to treat any pain\n6. If the face or eyes are burnt, sit up as much as possible, rather than lying down - this helps to reduce swelling.\n7. Seek medical assistance if you are having a sore throat, difficulties in breathing, a sore throat.\n</string>
     <string name="injury4"> 1. Stop any bleeding before applying a dressing to the wound. Apply pressure to the area using a clean and dry absorbent material – such as a bandage, towel or handkerchief – for several minutes. \n2. Wash and dry your hands thoroughly.\n3. Clean the wound under drinking-quality running tap water – avoid using antiseptic as it may damage the skin and slow healing.\n4. Pat the area with a clean towel.\n5. Apply a sterile adhesive dressing, such as a plaster.\n6. If the wound is painful for the first few days, you can take over-the-counter painkillers such as paracetamol or ibuprofen. \n"</string>
     <string name="injury5"> 1. Call emergency service and get medical help.\n2. Try to carefully remove the chemical and any contaminated clothing.\n3. Rinse the affected area using as much clean water as possible.\n"</string>
+
+    <string name="NoAnswer">Sorry. I have not enough knowledge to help. Please see a doctor as soon as possible.</string>
+    <!-- Root questions -->
+    <string name="headache">Do you have a headache?</string>
+    <string name="askSymptom">What do you want me to do? Check symptoms or provide Medication?</string>
+
+
+    <!-- Disease solutions -->
+    <string name="migrain">sleeping or lying in a darkened room, eating also helps,or take painkillers- paracetamol, ibuprofen</string>
+    <string name="pneumonia">Mild pneumonia can usually be treated at home with rest, antibiotics and by drinking plenty of fluids. More severe cases may need hospital treatment.\n
+        Unless a health care professional tells you otherwise, you should always finish taking a prescribed course of antibiotics, even if you feel better.\n
+
+If you stop taking an antibiotic part way through a course, the bacteria can become resistant to the antibiotic.\n\n
+
+After starting treatment, your symptoms should steadily improve.\n\n
+
+However, how quickly they improve will depend on how severe your pneumonia is. \n\n
+
+As a general guide, after:\n\n
+
+one week – fever should have resolved\n
+four weeks – chest pain and mucus production should have substantially reduced\n
+six weeks – cough and breathlessness should have substantially reduced\n
+three months – most symptoms should have resolved, but you may still feel very tired (fatigue)\n
+six months – most people will feel back to normal
+    </string>
+
+    <string name="insomnia"> "Insomnia will often improve by making changes to your bedtime habits. If these don't help, your GP may be able to recommend other treatments.\n\n
+
+If you've had insomnia for more than four weeks, your GP may recommend cognitive and behavioural treatments or suggest a short course of prescription sleeping tablets as a temporary measure.\n\n
+
+If it's possible to identify an underlying cause of your sleeping difficulties, treating this may be enough to return your sleep to normal."
+    </string>
+
+    <string name="dehydration">
+        The best way to treat dehydration is to rehydrate the body by drinking plenty of fluids, such as water, diluted squash or diluted fruit juice.
+/n/n
+A sweet drink can help to replace lost sugar, and a salty snack can help to replace lost salt.
+
+    </string>
+
 </resources>

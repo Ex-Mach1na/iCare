@@ -10,10 +10,7 @@ import com.example.icare.databinding.ItemMessageReceiveBinding
 import com.example.icare.databinding.ItemMessageSendBinding
 import com.example.icare.model.InjuryInfo
 import com.example.icare.model.Message
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.databinding.BindableItem
@@ -41,24 +38,6 @@ class InjuryActivity : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("Injury")
         allInjuryInfo = mutableListOf()
         tempArray = resources.getStringArray(R.array.injury_name)
-
-        ref.addValueEventListener(object : ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists())
-                {
-                    Log.d("Database", "Found")
-                    for(data in snapshot.children)
-                    {
-                        val temp : InjuryInfo? = data.getValue(InjuryInfo::class.java)
-                        Log.d("ValuesOfDatabase","Data = ${temp!!.id}  ${temp.Name} ")
-                    }
-                }
-            }
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
 
 
         injuryRecycleV.adapter = messageAdapter

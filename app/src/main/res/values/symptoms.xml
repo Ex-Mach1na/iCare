@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="symptoms">
+        <item name = "headache">headache</item>
+        <item name = "vomit">vomiting</item>
+        <item name = "dry cough">dry cough</item>
+        <item name = "breathing difficulty">breathing difficulty</item>
+        <item name = "loss of appetite">loss of appetite</item>
+        <item name = "chest pain">chest pain</item>
+        <item name = "fever">fever</item>
+        <item name = "rapid heartbeat">rapid heartbeat</item>
+        <item name = "stress">stress</item>
+        <item name = "anxiety">anxiety</item>
+        <item name = "less sleep">less sleep</item>
+        <item name = "dizziness">dizziness</item>
+        <item name = "dry mouth">dry mouth</item>
+        <item name = "pain in limbs">pain in limbs</item>
+        <item name = "tiredness">tiredness</item>
+        <item name = "nothing else">nothing else</item>
+        <item name = "show disease">show disease</item>
+        <item name = "show symptoms">show symptoms</item>
+    </string-array>
+</resources>

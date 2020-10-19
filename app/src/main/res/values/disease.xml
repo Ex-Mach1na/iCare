@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="disease">
+        <item name = "migraine">migraine</item>
+        <item name = "pneumonia">pneumonia</item>
+        <item name = "insomnia">insomnia</item>
+        <item name = "dehydration">dehydration</item>
+    </string-array>
+</resources>
